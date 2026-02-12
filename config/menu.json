@@ -1,0 +1,32 @@
+{
+    "roles": {
+        "admin": {
+            "label": "Admin",
+            "dashboard": "dashboard.php",
+            "permissions": ["read", "create", "update", "delete"]
+        },
+        "petugas": {
+            "label": "Petugas",
+            "dashboard": "dashboard.php",
+            "permissions": ["read"]
+        }
+    },
+    "modules": {
+        "buku": {
+            "allowed_roles": ["admin", "petugas"],
+            "permissions": ["read"]
+        },
+        "peminjaman": {
+            "allowed_roles": ["admin", "petugas"],
+            "permissions": ["read", "create", "update", "delete"]
+        },
+        "pengembalian": {
+            "allowed_roles": ["admin", "petugas"],
+            "permissions": ["read", "create"]
+        },
+        "users": {
+            "allowed_roles": ["admin"],
+            "permissions": ["read", "create", "update", "delete"]
+        }
+    }
+}
